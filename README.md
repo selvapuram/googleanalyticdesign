@@ -30,7 +30,7 @@ Scalability is the key aspect of microservices. Because each service is a separa
 The microservices are designed for scalability, resilience, fault-tolerance and high availability and importantly it can be achieved through deploying the services in a Docker Swarm or Kubernetes cluster. Distributed and geographically spread Zuul API gateways route requests from web and mobile visitors to the microservices registered in the load balanced Eureka server.
 The core processing logic of the backend system is designed for scalability, high availability, resilience and fault-tolerance using distributed Streaming Processing, the microservices will ingest data to Kafka Streams data pipeline.
 
-# Apache Kafka Streams
+## Apache Kafka Streams
 Apache Kafka is used for building real-time streaming data pipelines that reliably get data between many independent systems or applications.
 It allows:
 - Publishing and subscribing to streams of records
@@ -41,7 +41,7 @@ Kafka is run as a cluster on one or more servers that can span multiple datacent
 Kafka uses Zookeeper to store metadata about brokers, topics and partitions.
 Kafka Streams is a pretty fast, lightweight stream processing solution that works best if all of the data ingestion is coming through Apache Kafka. The ingested data is read directly from Kafka by Apache Spark for stream processing and creates Timeseries Ignite RDD (Resilient Distributed Datasets).
 
-# Apache Spark
+## Apache Spark
 Spark Streaming is an extension of the core Spark API that enables scalable, high-throughput, fault-tolerant stream processing of live data streams.
 It provides a high-level abstraction called a discretized stream, or DStream, which represents a continuous stream of data.
 DStreams can be created either from input data streams from sources such as Kafka, Flume, and Kinesis, or by applying high-level operations on other DStreams. Internally, a DStream is represented as a sequence of RDDs (Resilient Distributed Datasets).
@@ -50,7 +50,7 @@ Apache Spark is a perfect choice in our case. This is because Spark achieves hig
 In our scenario Spark streaming process Kafka data streams; create and share Ignite RDDs across Apache Ignite which is a distributed memory-centric database and caching platform.
 
 
-# Apache Ignite
+## Apache Ignite
 Apache Ignite is a distributed memory-centric database and caching platform that is used by Apache Spark users to:
 - Achieve true in-memory performance at scale and avoid data movement from a data source to Spark workers and applications.
 - More easily share state and data among Spark jobs.
